@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Medicine</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <!--<ion-card *ngFor="let msg of chatMessages">
+       <ion-card-header>
+          {{ msg.name }}
+        </ion-card-header>
+        <ion-card-content>
+          {{ msg.quantity }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ msg.date }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ msg.time }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ msg.message }}
+        </ion-card-content>
+      </ion-card>-->
+      <ion-input type="text" placeholder="Medicine Name" [(ngModel)] = "chat.name" name="message"></ion-input>
+      <ion-input type="text" placeholder="Quantity" [(ngModel)] = "chat.quantity" name="message"></ion-input>
+      <ion-item>
+        <ion-label>Date Time</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+  
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-item>
+            <ion-input type="text" placeholder="Any Comments" [(ngModel)] = "chat.message" name="message"></ion-input>
+          </ion-item>
+        <ion-buttons end>
+          <button ion-button icon-end color="royal" (click)="sendMessage()">
+            Submit
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+  
+</ion-footer>
